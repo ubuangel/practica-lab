@@ -1,4 +1,5 @@
 //project euler problem 3
+//https://projecteuler.net/archives
 int main(){
 n = 600851475143;		
 i = 2;
