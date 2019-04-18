@@ -16,3 +16,9 @@ int sum ( const int a , const int b , const int c = 0 , const int d = 0)
 
 return a + b + c + d ;
 }
+//ejercicio 4.6
+int sum ( const int numbers [] , const int numbersLen ) {
+
+	return numbersLen == 0 ? 0 : numbers [0] + sum ( numbers + 1 ,
+		numbersLen - 1) ;
+}
