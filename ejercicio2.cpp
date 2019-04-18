@@ -13,7 +13,7 @@ int main ()
 	f(a);
 	f () ;
 }
-//ejercicio 3
+//ejercicio 4.3
 
 int sum ( const int x , const int y , const int z ) {
 return x + y + z ;
