@@ -13,27 +13,34 @@ cout<<n;
 
 }
 //project euler problem 2
-int main(){
-	unsigned long long a[100],n,sum=0;
+int main()
+{
+  unsigned  long long n, c, primero = 0, segundo = 1, next,sum=0;
 
-	cout<<" termino del fibonaci mayo o igual que 3 ";cin>>n;
-	a[1]=1;
-	a[0]=1;
-	cout<<a[1];
-	 cout<<",";
-	cout<<a[0]<<",";
-	for (int i = 0; i < n-2; i++) {
-		a[i+2]=a[i+1]+a[i];
-		if (a[i+2]%2==0 ) {
+   cout << "ingrese el numerod e terminos de la serie de fibonacci \n" ;
+   cin >> n;
 
+   cout << "First " << n << " los terminos de fibonacci :- \n" ;
 
-			sum+=a[i+2];
-			cout<<"suma"<<sum<<endl;
-		}
+   for ( c = 0 ; c < n ; c++ )
+   {
+      if ( c <= 1 )
+         next = c;
+      else
+      {
+         next = primero + segundo;
+         primero = segundo;
+         segundo = next;
+      if(next%2==0 && sum<4000000)
+    	  sum=sum+next;
+      }
+      cout << next <<" \n";
+      cout <<"\n" <<sum<<" \n";
+   }
 
-		}//233168
-	cout<<"fibonacii del termino  en el ejrcicio "<<n-1<<" "<<a[n-1]<<" ,";
-	}//4613732
+   return 0;
+}
+
 //project euler problem 1
 int main(){
 //	cout<<" ingrese  "<<endl;
