@@ -25,39 +25,22 @@ cout<<n;}
 
 //project3
 
-void primo (double n)
-{
-    for(int i=2;i<n;i++)
-    {
-        int c=0;
-        double num;
-        for(int j=2;j<i;j++)
-        {
-            if(i%j==0)
-            {
-                c++;
-            }
-        }
+////Largest prime factor 600851475143
+	int main(){
+		long long n,cont=0;
+		cout<<" ingresar numero \n";cin>>n;
+		for (int j = 1; j < n; j++) {
+			cont=0;
+			for (int var =1; var<= j+1; var++) {
+				if((j+1)%var==0 )
+					cont++;
 
-        if(c==0)
-        {
-
-            num=i;
-            if(fmod(n,num)==0)
-            {
-            cout<<num<<" ";
-            }
-        }
-    }
-}
-int main()
-{
-    double n;
-    cout<<"numero: ";
-    cin>>n;
-    primo(n);
-}
-
+						}
+//			if(cont==2){
+//				cout<<"es primo \n"<<j+1<<"\n";
+					if(n%(j+1)==0 && cont==2)
+						cout<<"factores"<<j+1 <<"  \n";}
+				}
 //project euler problem 2
 
 int main()
