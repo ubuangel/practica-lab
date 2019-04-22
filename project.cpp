@@ -50,7 +50,7 @@ int main()
 
 int main()
 {
-  unsigned  long long n, c, primero = 0, segundo = 1, next,sum=0;
+  unsigned  long  n, c, primero = 0, segundo = 1, next,sum=0;
 
    cout << "ingrese el numerod e terminos de la serie de fibonacci \n" ;
    cin >> n;
@@ -151,7 +151,7 @@ int main()
 //ejercicio 6
 #include<math.h>
 int main(){
-	  long s=0, t,n;
+	  int s=0, t,n;
 	cout<<" ingrese hasta que numero \n";
 	cin>>n;
 	for (int i = 1; i <= n; i++){
