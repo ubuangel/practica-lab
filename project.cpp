@@ -151,7 +151,7 @@ int main()
 //ejercicio 6
 #include<math.h>
 int main(){
-	 long long s=0, t=0,n;
+	  long s=0, t,n;
 	cout<<" ingrese hasta que numero \n";
 	cin>>n;
 	for (int i = 1; i <= n; i++){
@@ -159,10 +159,11 @@ int main(){
 	}
 
 
-	for (int j = 1; j <= n; j++){
-		t=t+j;
+//	for (int j = 1; j <= n; j++){
+//		t=t+j;
+		t=(n*(n+1))/2;
 //		cout<<t<<" ";
-	}
+//	}
 		cout<<s<<"\n";
 		cout<<t <<" \n";;
 	cout<<pow(t,2)-s;
