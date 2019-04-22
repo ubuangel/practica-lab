@@ -1,3 +1,15 @@
+//project euler problem 1
+
+int main(){
+//	cout<<" ingrese  "<<endl;
+	int sum=0;
+	for (int var = 3; var < 1000; var++) {
+		if(var%3==0 ||var%5==0){
+			sum+=var;
+		}
+}
+	cout<<sum;}
+
 //project euler problem 3
 //https://projecteuler.net/archives
 
@@ -75,40 +87,8 @@ int main()
 
    return 0;
 }
-//project euler problem 1
 
-int main(){
-//	cout<<" ingrese  "<<endl;
-	int sum=0;
-	for (int var = 3; var < 1000; var++) {
-		if(var%3==0 ||var%5==0){
-			sum+=var;
-		}
-}
-	cout<<sum;}
 
-//primos
-int main()
-{
-//for (int j=2;j<=100;j++){//por definicion el 1 no es primo, se empieza en 2
- //int a=0;
- int n;
- cout<<"numero";cin>>n;
- for( int j = 2; j <=n; j++)
- {
-     
- int a=0;
- for(int i=1;i<=n;i++)//divide a j entre los números del 1 al 100
- 
- {
-    if(j%i==0) // si num1 módulo de i es 0, incrementamos a en 1.
-    a++;
- }
- if (a==2){ //si solo tiene dos números divisores entonces es primo y se imprime
- cout<<" "<<j;
-        }
-    }
-}
 //project 4
 
 int palindromo3(int n)
@@ -146,12 +126,8 @@ int main()
            }
        }
     }
-
 }
 //eejrcicio 5
-#include<iostream>
-using namespace std;
-
 void dividir(double n, int k)
 {
     for(int i=100;i<n;i++)
@@ -169,9 +145,6 @@ void dividir(double n, int k)
         {
             cout<<i<<",";
         }
-
-
-
     }
 }
 
@@ -206,59 +179,22 @@ int main(){
 		cout<<t <<" \n";;
 	cout<<pow(t,2)-s;
 }
-//ejercicio 7
-int primos(int *p, int n)
-{
+//primos ejercicio 7
 
-    int w,k=0;
-    cout<<"numero primo deseado: ";
-    cin>>w;
-    for(int i=2; i<n;i++)
-    {
-        int c=0;
-        for(int j=2;j<i;j++)
-        {
-            if(i%j==0)
-            {
-                c++;
-            }
-        }
-        if (c==0)
-        {
-            p[k]=i;
-            k++;
-        }
-    }
+int main(){//empieza desde el 2 1 no es primo
+	long n,cont=0;
+	cout<<" ingresar numero \n";cin>>n;
+	for (int j = 1; j < n; j++) {
+		for (int var =1; var<= j+1; var++) {
+			if((j+1)%var==0 )
+				cont++;
 
-    cout<<k<<endl;
-    for(int j=0;j<k;j++)
-    {
-
-        cout<<p[j]<<" ";
-    }
-
-    for(int r=0;r<k;r++)
-    {
-        if(r==w)
-        {
-            cout<<"\nel numero primo "<<w<<" es: "<<p[r-1];
-            break;
-        }
-    }
+					}
+if(cont==2)
+	cout<<"es primo \n"<<j+1<<"\n";
+cont=0;
+	}
 }
-
-
-int main()
-{
-    int *p,q;
-    int n;
-    p=new int[n];
-    cout<<"Ingrese un numero: ";
-    cin>>n;
-    primos(p,n);
-
-}	
-
 //project 9
 void pythagorean(int n)
 {
