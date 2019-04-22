@@ -211,3 +211,22 @@ void pythagorean(int n)
                 }
             }
 }
+//ejrcicio 10
+int main(){
+		long n,cont=0,sum=0;
+		cout<<" ingresar numero \n";cin>>n;
+		for (int j = 1; j < n; j++) {
+			cont=0;
+			for (int var =1; var<= j+1; var++) {
+				if((j+1)%var==0 )
+					cont++;
+
+						}
+	if(cont==2){
+	cout<<"es primo \n"<<j+1<<"\n";
+		 sum+=(j+1);
+		cout<<"sumatoria"<<sum<<" ";}
+
+	}
+//		while(sum<2000000){
+}
