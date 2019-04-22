@@ -163,8 +163,8 @@ int main(){
 	cout<<pow(t,2)-s;
 }
 //primos ejercicio 7
-
-int main(){//empieza desde el 2 1 no es primo
+//empieza desde el 2 1 no es primo
+int main(){
 	long n,cont=0;
 	cout<<" ingresar numero \n";cin>>n;
 	for (int j = 1; j < n; j++) {
@@ -173,10 +173,13 @@ int main(){//empieza desde el 2 1 no es primo
 				cont++;
 
 					}
-if(cont==2)
+if(cont==2){
 	cout<<"es primo \n"<<j+1<<"\n";
-cont=0;
+		sum+=(j+1);
+		cout<<"sumatoria"<<sum<<" ";
+	cont=0;
 	}
+}
 }
 //project 9
 void pythagorean(int n)
