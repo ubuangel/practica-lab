@@ -170,3 +170,19 @@ int main(){
 
 
 }
+//project 9
+void pythagorean(int n)
+{
+    int a,b,c;
+    for(int c=1;c<100000;c++)
+        for(int a=1;a<c;a++)
+            for(int b=1;b<c;b++)
+            {
+                if(c*c==a*a+b*b&&a+b+c==n)
+                {
+                    cout<<c<<endl;
+                    cout<<a<<endl;
+                    cout<<b<<endl;
+                }
+            }
+}
