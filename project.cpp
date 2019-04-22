@@ -1,6 +1,6 @@
 //project euler problem 3
 //https://projecteuler.net/archives
-#include<iostream>
+
 using namespace std;
 int main(){
 n = 600851475143;		
@@ -9,10 +9,45 @@ while( i * i <= n){
     while (n % i == 0)
         n = n / i;
     i = i + 1; }
-cout<<n;
+cout<<n;}
 
+//project3
+
+void primo (double n)
+{
+    for(int i=2;i<n;i++)
+    {
+        int c=0;
+        double num;
+        for(int j=2;j<i;j++)
+        {
+            if(i%j==0)
+            {
+                c++;
+            }
+        }
+
+        if(c==0)
+        {
+
+            num=i;
+            if(fmod(n,num)==0)
+            {
+            cout<<num<<" ";
+            }
+        }
+    }
 }
+int main()
+{
+    double n;
+    cout<<"numero: ";
+    cin>>n;
+    primo(n);
+}
+
 //project euler problem 2
+
 int main()
 {
   unsigned  long long n, c, primero = 0, segundo = 1, next,sum=0;
@@ -40,8 +75,8 @@ int main()
 
    return 0;
 }
-
 //project euler problem 1
+
 int main(){
 //	cout<<" ingrese  "<<endl;
 	int sum=0;
@@ -74,4 +109,42 @@ int main()
         }
     }
 }
+//project 4
 
+int palindromo3(int n)
+{
+    int m=n;
+    int p=1;
+    while(n/10>=1)
+    {
+
+        p=p*10;
+        n=n/10;
+    }
+
+   int numero=0;
+    while(m/10>=1)
+    {
+        numero=numero+m%10*p;
+        p=p/10;
+        m=m/10;
+    }
+    return numero+m;
+}
+int main()
+{
+    int i,j;
+    int z;
+    for(i=100;i<1000;i++)
+    {
+       for(int j=100;j<1000;j++)
+       {
+           z=i*j;
+           if(z==palindromo3(z))
+           {
+               cout<<z<<" ";
+           }
+       }
+    }
+
+}
