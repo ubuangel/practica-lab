@@ -60,6 +60,17 @@ int main()
 return 0;
     
 }
+//2.5
+int main(){
+int size;
+cin>>size;
+int *nums=new int[size];
+for(int i=0;i<size;++i)
+{
+    cin>>nums[i];
+    delete [] nums;
+}
+}
 //2.6
 class Point{
     private: int x,y;
