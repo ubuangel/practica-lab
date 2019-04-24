@@ -103,22 +103,11 @@ public:
 		y=_y;
 	}
 
-	int getX();
-	int getY();
+	int getX(){return x;}
+	int getY(){return y;}
 	void setX(int);
 	void setY(int);
 } ;
-
-
-int Point::getX()
-{
-	return x;
-}
-
-int Point::getY()
-{
-	return y;
-}
 
 void Point::setX(int newX)
 {
