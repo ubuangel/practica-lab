@@ -95,21 +95,6 @@ void printArray ( const int arr [] , const int len ) {
 	}
  }
 
-//ejercicio 6.2
-void reverse ( int numbers [] , const int numbersLen ) {
-
-	for ( int i = 0; i < numbersLen / 2; ++ i ) {
-
-		int tmp = numbers [ i ];
-
-		int indexFromEnd = numbersLen - i - 1;
-
-		numbers [ i ] = numbers [ indexFromEnd ];
-
-		numbers [ indexFromEnd ] = tmp ;
-
-	}
-}
 //ejerciio 6.3
 void transpose ( const int input [][ LENGTH ] , int output [][ WIDTH ]) {
 
@@ -135,6 +120,17 @@ void reverse ( int numbers [] , const int numbersLen ) {
 
 	}
 }
+int main(int argc, char **argv) {
+
+	int vector[10]={2,4,5,6,7};
+
+	 reverse(vector,5);
+	 for (int i = 0; i < 5; ++i) {
+		cout<<vector[i];
+	}
+
+}
+
 //ejercicio 7.1
 int stringLength ( const char * str ) {
 
@@ -148,16 +144,18 @@ int stringLength ( const char * str ) {
 
 	return length ;
  }
-//ejrcicio 7.2
-void swap ( int &x , int & y ) {
+int main(){
+	cout<<stringLength("Hola");
+		}
+//ejrcicio 7.2--//ejercicio 7.3
+void swap1 ( int &x , int & y ) {
 
 	int tmp = x ;
 
 	x = y;
 
 	y = tmp ;
-}
-//ejercicio 7.3
+
 void swap ( int *x , int * y ) {
 
 	int tmp = * x ;
@@ -166,12 +164,9 @@ void swap ( int *x , int * y ) {
 
 	* y = tmp ;
 }
-//ejercicio 7.4
-void swap ( int ** x , int ** y ) {
+int main(){
+		int x = 5 , y = 6;
+		swap(&x,&y);
+		cout << x << " "<<  y; // Prints "6 5"
+	}
 
-	int * tmp = * x ;
-
-	*x = *y;
-
-	* y = tmp ;
-}
